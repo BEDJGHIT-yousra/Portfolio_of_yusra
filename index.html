@@ -12,14 +12,32 @@
         <p class="eyebrow">Portfolio</p>
         <h1>Selected Projects</h1>
         <p class="lede">A focused set of product and UI projects. Each card includes quick context and the project visuals.</p>
+        <button id="adminToggle" class="admin-toggle" type="button">Admin</button>
       </div>
     </header>
 
     <main class="container">
-      <section class="project">
+      <section class="project skills">
+        <div class="project-head">
+          <h2>Skills</h2>
+          <p>Tools and disciplines used across projects.</p>
+        </div>
+        <ul class="skills-list" id="skillsList">
+          <li>UI/UX Design</li>
+          <li>Product Design</li>
+          <li>Web Design</li>
+          <li>Figma</li>
+          <li>Prototyping</li>
+          <li>Design Systems</li>
+          <li>User Research</li>
+        </ul>
+      </section>
+
+      <section class="project" data-project-id="event-org">
         <div class="project-head">
           <h2>Event Organization Website + App</h2>
           <p>End-to-end event planning experience with a public site, contact flow, and a companion app for organizers and attendees.</p>
+          <a class="project-link" href="#" target="_blank" rel="noopener" data-project-link hidden>Project link</a>
         </div>
         <div class="gallery">
           <img src="event%20organization%20website%20+%20app/website.PNG" alt="Event organization website landing" loading="lazy" />
@@ -28,30 +46,33 @@
         </div>
       </section>
 
-      <section class="project">
+      <section class="project" data-project-id="event-competition">
         <div class="project-head">
           <h2>Event Website Competition</h2>
           <p>Competition entry focused on brand storytelling, bold typography, and an immersive event narrative.</p>
+          <a class="project-link" href="#" target="_blank" rel="noopener" data-project-link hidden>Project link</a>
         </div>
         <div class="gallery">
           <img src="event%20website%20competition/etcversary.PNG" alt="Event competition website" loading="lazy" />
         </div>
       </section>
 
-      <section class="project">
+      <section class="project" data-project-id="school-project">
         <div class="project-head">
           <h2>School Project</h2>
           <p>Academic project exploring interface hierarchy and clear information flow for a school-focused product.</p>
+          <a class="project-link" href="#" target="_blank" rel="noopener" data-project-link hidden>Project link</a>
         </div>
         <div class="gallery">
           <img src="school%20project/School%20project.PNG" alt="School project interface" loading="lazy" />
         </div>
       </section>
 
-      <section class="project">
+      <section class="project" data-project-id="training-camp">
         <div class="project-head">
           <h2>Training Camp Hackathon</h2>
           <p>Multi-role HR and training management portal with dedicated views for admins, HR, and employees.</p>
+          <a class="project-link" href="#" target="_blank" rel="noopener" data-project-link hidden>Project link</a>
         </div>
         <div class="gallery">
           <img src="Training%20camp%20hackathon/homepage.PNG" alt="Training camp hackathon homepage" loading="lazy" />
@@ -63,10 +84,11 @@
         </div>
       </section>
 
-      <section class="project">
+      <section class="project" data-project-id="tp-hospital">
         <div class="project-head">
           <h2>TP - Hospital Management System</h2>
           <p>Comprehensive hospital workflow UI spanning admin, doctor, nurse, lab, radiology, and patient experiences.</p>
+          <a class="project-link" href="#" target="_blank" rel="noopener" data-project-link hidden>Project link</a>
         </div>
 
         <div class="role">
@@ -145,5 +167,36 @@
         </div>
       </section>
     </main>
+
+    <div id="adminPanel" class="admin-panel" hidden>
+      <div class="admin-inner">
+        <div class="admin-header">
+          <h2>Admin Editor</h2>
+          <p>Edit titles, descriptions, links, images, and skills. Changes are saved in this browser only.</p>
+        </div>
+        <div class="admin-body">
+          <section class="admin-section">
+            <h3>Projects</h3>
+            <div id="adminProjects" class="admin-projects"></div>
+          </section>
+          <section class="admin-section">
+            <h3>Skills</h3>
+            <div class="admin-skill-input">
+              <input id="adminSkillInput" type="text" placeholder="Add a skill" />
+              <button id="adminSkillAdd" type="button">Add</button>
+            </div>
+            <ul id="adminSkillsList" class="admin-skills"></ul>
+          </section>
+          <div class="admin-actions">
+            <button id="adminSave" type="button">Save changes</button>
+            <button id="adminReset" type="button" class="ghost">Reset to default</button>
+            <button id="adminLogout" type="button" class="ghost">Logout</button>
+          </div>
+          <p class="admin-note">Tip: Use full URLs or local paths for images. Local file uploads are stored in this browser only.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
   </body>
 </html>
