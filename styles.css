@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #f6f2ee;
+  --ink: #121212;
+  --muted: #5e5b57;
+  --card: #ffffff;
+  --accent: #da5f39;
+  --line: #e3d9d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #fff8ef 0%, #f4ede7 50%, #efe7de 100%);
+}
+
+.hero {
+  padding: 80px 16px 40px;
+  background: linear-gradient(120deg, #fef6ee 0%, #f5e1d2 55%, #f8efe7 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  margin: 0 0 12px;
+}
+
+.lede {
+  max-width: 640px;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.project {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+}
+
+.project-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project h2 {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin: 0;
+}
+
+.project p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.role {
+  margin-top: 20px;
+}
+
+.role h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #efe3da;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 60px 16px 30px;
+  }
+
+  .project {
+    padding: 22px;
+  }
+}
